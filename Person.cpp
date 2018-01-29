@@ -55,10 +55,7 @@ bool Person::update_location(){
 //Sets the destination of the person
 void Person::setup_destination(Cart_Point dest){
 	destination = dest;
-	//cout << "Starting location is at: " << location << endl;
 	delta = (destination - location) * (speed/cart_distance(destination,location));
-	//cout << "delta is: " << delta << endl;
-	//cout << "dest is: " << dest << endl;
 
 	
 }

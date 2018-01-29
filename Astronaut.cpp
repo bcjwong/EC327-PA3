@@ -32,7 +32,6 @@ Astronaut::~Astronaut(){
 
 //All update states for astronaut
 bool Astronaut::update(){
-	//cout << "ASTRONAUT UPDATE STATE is: " << state<< endl;
 	switch(state){
 		case 's':
 			return false;

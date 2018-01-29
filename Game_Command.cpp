@@ -85,14 +85,9 @@ void do_lock_command(Model& model, View& view){
 //Advances one time step
 void do_go_command(Model& model, View& view){
 	cout << "Advancing one tick." << endl;
-	//Person* person_ptr = model.get_Person_ptr(1);
-	//cout << "IN GO STATE of person 1 is: " << person_ptr->get_state() << endl;
-	//cout << "IN GO LOC of person 1 is: " << person_ptr->get_location() << endl;
 
 	model.update();
 
-	//cout << "State of person " << person_ptr->get_id() << " AFTER UPDATEis " << person_ptr->get_state() << endl;
-	//cout << "location of person " << person_ptr->get_id() << "AFTER UPDATE is " << person_ptr->get_location() << endl;
 	model.show_status();
 	model.display(view);
 
@@ -102,13 +97,6 @@ void do_go_command(Model& model, View& view){
 //Advance one step until update function returns true for at least one object, or 5 time steps have passed
 void do_run_command(Model& model, View& view){
 	cout << "Advancing to next event." << endl;
-	/*for (int i = 0; i < 5; i++)
-	{
-		if(model.update())
-		{
-			break;
-		}
-	}*/
 
 	int check = 0;
 	int steps = 0;

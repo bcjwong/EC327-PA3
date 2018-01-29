@@ -153,9 +153,6 @@ bool Model::update(){
 	update_check = 0;
 	for (int i = 0; i < num_objects; i++)
 	{
-		//cout << "STATE OF OBJECT IN UPDAGTE" << i << " is "<<object_ptrs[0]->get_state() << endl;
-		//cout << "STATE OF PERSON IN UPGRADE" << i << " is " << person_ptrs[0]->get_state() << endl;
-		//cout << "UPDATING EVERY OBJECT" << endl;
 		
 		if(object_ptrs[i]->update())
 		{
@@ -183,8 +180,6 @@ void Model::display(View &view){
 //Show status of all the objects
 void Model::show_status(){
 	cout << "Time: " << time << endl;
-	//cout << "State of person "<<object_ptrs[0]->get_id()<< " B4 SHOW STATUS IN SHOW " << object_ptrs[0]->get_state() << endl;
-	//cout << "location of person "<<object_ptrs[0]->get_id() << " B4 SHOW STATUS IN SHOW "<< object_ptrs[0]->get_location() << endl;
 	for (int i = 0; i < num_objects; i++)
 		object_ptrs[i]->show_status();
 	
